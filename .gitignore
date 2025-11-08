@@ -33,3 +33,6 @@ Thumbs.db
 # IDE files
 .idea/
 *.iml
+
+allure-report/
+allure-results/

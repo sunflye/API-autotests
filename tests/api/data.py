@@ -1,6 +1,5 @@
 from tests.api.models import AdditionRequest, EntityRequest
 
-
 def make_entity_request(
     title="Заголовок сущности",
     verified=True,
@@ -8,6 +7,10 @@ def make_entity_request(
     additional_number=123,
     important_numbers=None,
 ):
+    """
+    Генерирует объект EntityRequest с заданными или стандартными параметрами.
+    Используется для создания тестовых данных в автотестах.
+    """
     if important_numbers is None:
         important_numbers = [42, 87, 15]
     return EntityRequest(

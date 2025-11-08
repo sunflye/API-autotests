@@ -10,6 +10,17 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+    services:
+      api:
+        image: yourdockerhubusername/simbirsoft_sdet_project-service:latest
+        ports:
+          - 8080:8080
+        options: >-
+          --health-cmd="curl --fail http://localhost:8080/health || exit 1"
+          --health-interval=5s
+          --health-timeout=2s
+          --health-retries=10
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4

@@ -8,13 +8,14 @@
    ```
 
 2. **Убедитесь, что API-сервис запущен и доступен по адресу http://localhost:8080**
+   ([API-сервис](https://github.com/bondarenkokate73/simbirsoft_sdet_project))
 
-3. **Запустите тесты параллельно с формированием Allure-отчёта:**
+4. **Запустите тесты параллельно с формированием Allure-отчёта:**
    ```sh
    pytest -n auto --alluredir=allure-results
    ```
 
-4. **Сгенерируйте и откройе Allure-отчёт:**
+5. **Сгенерируйте и откройе Allure-отчёт:**
    - Сгенерируйте HTML-отчёт:
      ```sh
      allure generate allure-results -o allure-report --clean
@@ -24,7 +25,7 @@
      allure open allure-report
      ```
 
-5. **Allure-отчёт:**
+6. **Allure-отчёт:**
    ![Allure-report](docs/image.png)
 
 
